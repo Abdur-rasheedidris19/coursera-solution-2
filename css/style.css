@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  color: #333;
+}
+header h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: red;
+}
+section {
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 30px;
+  margin-bottom: 100px;
+}
+section > div {
+  border: 1px solid black;
+  border-left: 3px solid black;
+  margin-left: 10px;
+}
+section > div:hover {
+  opacity: 0.9;
+}
+section > div > p {
+  padding: 15px;
+  color: rgb(2, 8, 24);
+  cursor: pointer;
+}
+section > div .color-1 {
+  background: #00a2ff;
+  margin: 0;
+  padding: 5px;
+}
+section > div .color-2 {
+  background: #008000;
+  margin: 0;
+  padding: 5px;
+}
+section > div .color-3{
+  background: #d40707;
+  margin: 0;
+  padding: 5px;
+}
+section > div h3 {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  width: 100px;
+  text-align: center;
+  border-radius: 3px;
+}
+.join {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  margin: 40px 0;
+}
+.join .mid {
+  text-align: center;
+  justify-self: center;
+  padding: 10px;
+  background: #008cff;
+  color: #fff;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  font-weight: bold;
+} 
+.join .mid:hover {
+  background: transparent;
+  color: #008cff;
+  border: 1px solid #008cff;
+  margin-bottom: 5px;
+  transition: all 0.4s ease-out;
+}
+footer {
+  text-align: center;
+  color: red;
+  font-size: 1.2rem;
+}
+
+/* Media Queries*/
+
+
+@media (max-width: 992px){
+  section {
+  display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin: 0 30px;
+  }
+}
+@media (min-width: 768px) {
+  section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+section > div:nth-child(3) {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+}
+
+@media (max-width: 767px) {
+  section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+}
